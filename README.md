@@ -36,3 +36,11 @@ openssl req -newkey rsa:4096 -nodes -keyout private.key -out certificate.csr
 ```bash
 openssl x509 -extfile extfile.txt -extensions v3_req_p -req -sha1 -days 3650 -CA ca.crt -CAkey ca.key -CAcreateserial -in certificate.csr -out certificate.pem
 ```
+
+运行办法
+```
+CONF_FILE_PATH=config/example.config.yaml ./tox local
+CONF_FILE_PATH=config/example.config.yaml ./tox server
+```
+
+TODO 搭建成服务
