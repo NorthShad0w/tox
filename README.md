@@ -4,7 +4,18 @@
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/isayme/tox?sort=semver&style=flat-square)
 ![Docker Pulls](https://img.shields.io/docker/pulls/isayme/tox?style=flat-square)
 
+在docker里面编译
+```
+docker build -t tox .
+```
 
+然后把能用的二进制提取出来   TODO: 调用garble
+
+
+```
+docker run --rm --entrypoint cat tox /app/tox > ./tox.bin
+docker run --rm --entrypoint cat tox /app/tox.exe > ./tox.exe
+```
 ## 证书，私钥生成办法
 
 extfile.txt
